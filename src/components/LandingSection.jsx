@@ -2,7 +2,7 @@ import { Canvas } from '@react-three/fiber'
 import { Suspense } from 'react'
 import { OrbitControls, Environment } from '@react-three/drei'
 
-import Model from './model'
+import Model from './Model'
 
 export default function LandingSection() {
   return (
