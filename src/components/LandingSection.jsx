@@ -1,10 +1,23 @@
+import { useEffect, useState, Suspense } from 'react'
+
 import { Canvas } from '@react-three/fiber'
-import { Suspense } from 'react'
 import { OrbitControls, Environment } from '@react-three/drei'
 
 import Model from './Model'
 
 export default function LandingSection() {
+  const [isMobile, setIsMobile] = useState(false)
+  
+  useEffect(() => {
+    const checkWidth = () => {
+      setIsMobile(window.innerWidth < 1200)
+    }
+
+    checkWidth()
+    window.addEventListener('resize', checkWidth)
+    return () => window.removeEventListener('resize', checkWidth)
+  }, [])
+
   return (
     <section
       id="landing"
@@ -41,7 +54,8 @@ export default function LandingSection() {
       </div>
 
       {/* 3D MACBOOK MODEL */}
-      <div className="absolute right-30 w-[600px] h-[600px] z-10">
+      {!isMobile ? (
+      <div className="absolute right-[4vw] w-[600px] h-[600px] z-10">
         <Canvas camera={{ position: [-5, 0, -15], fov: 55 }}>
           <ambientLight intensity={0.5} />
           <pointLight position={[10, 10, 10]} intensity={1.5} />
@@ -54,6 +68,7 @@ export default function LandingSection() {
           <OrbitControls enableZoom={false} enablePan={false} minPolarAngle={Math.PI / 2.2} maxPolarAngle={Math.PI / 2.2} />
         </Canvas>
       </div>
+      ) : (<div style={{height: 0}}></div>)}
     </section>
   )
 }
