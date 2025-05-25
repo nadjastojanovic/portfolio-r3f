@@ -28,7 +28,7 @@ export default function Screen() {
 
             <div className="absolute right-20 w-[200px] h-[200px] z-10">
                 <img
-                    src='../../public/model-screenshot.png'
+                    src='/model-screenshot.png'
                     alt='3D Laptop Model'
                     className="w-full object-contain"
                 />
