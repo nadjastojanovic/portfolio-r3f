@@ -34,9 +34,9 @@ const projectsData = [
     description:
       'A gamified mobile application designed to be incorporated in Kazakhstan\'s primary school ecology curriculum.',
     image: '/projects/savetuba.png',
-    tags: ['React Native', 'React', 'Expo'],
+    tags: ['React Native', 'Expo', 'Firebase', 'Redux'],
     category: 'App Development',
-    link: 'https://www.savetuba.blog/',
+    link: 'https://github.com/nadjastojanovic/save-tuba',
   },
   {
     title: 'News Classification',
