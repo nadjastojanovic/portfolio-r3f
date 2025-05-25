@@ -45,7 +45,7 @@ export default function LandingSection() {
         <h2 className="text-3xl mb-4">Hey, it's Nađa ˙⋆✮</h2>
         <h1 className="text-6xl font-bold mb-4">
           Full-stack Developer <br />
-          & Data Science nerd
+          & Data Science nerd  N  
         </h1>
         <p className="text-xl">
           Practical experience across software engineering<br />
